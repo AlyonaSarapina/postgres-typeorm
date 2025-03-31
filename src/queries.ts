@@ -1,10 +1,10 @@
 import { AppDataSource } from "./data-source";
 import { Room } from "./entities/Room";
 import { Customer } from "./entities/Customer";
-import { Table } from "./entities/Table";
+import { Tables } from "./entities/Tables";
 
 const getTableRoom = async (tableId: number) => {
-  const tableRepo = AppDataSource.getRepository(Table);
+  const tableRepo = AppDataSource.getRepository(Tables);
   const table = await tableRepo.findOne({
     where: { id: tableId },
     relations: ["room"],

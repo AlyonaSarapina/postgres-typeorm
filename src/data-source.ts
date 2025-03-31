@@ -15,7 +15,7 @@ export const AppDataSource = new DataSource({
 
   entities: [
     `${__dirname}/entities/Customer.ts`,
-    `${__dirname}/entities/Table.ts`,
+    `${__dirname}/entities/Tables.ts`,
     `${__dirname}/entities/Room.ts`,
   ],
   migrations: [`${__dirname}/**/migrations/*.{ts,js}`],

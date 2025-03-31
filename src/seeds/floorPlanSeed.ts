@@ -1,6 +1,6 @@
 import { AppDataSource } from "../data-source";
 import { Room } from "../entities/Room";
-import { Table } from "../entities/Table";
+import { Table } from "../entities/Tables";
 
 const seedFloorPlan = async () => {
   await AppDataSource.initialize();

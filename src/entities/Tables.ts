@@ -10,7 +10,7 @@ import { Room } from "./Room";
 import { Customer } from "./Customer";
 
 @Entity({ schema: "floor_plan" })
-export class Table {
+export class Tables {
   @PrimaryGeneratedColumn()
   id: number;
 

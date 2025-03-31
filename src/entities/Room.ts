@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
-import { Table } from "./Table";
+import { Tables } from "./Tables";
 
 @Entity({ schema: "floor_plan" })
 export class Room {
@@ -9,6 +9,6 @@ export class Room {
   @Column({ unique: true })
   name: string;
 
-  @OneToMany(() => Table, (table) => table.room)
-  tables: Table[];
+  @OneToMany(() => Tables, (tables) => tables.room)
+  tables: Tables[];
 }

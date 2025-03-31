@@ -1,6 +1,6 @@
 import { AppDataSource } from "../data-source";
 import { Customer } from "../entities/Customer";
-import { Table } from "../entities/Table";
+import { Table } from "../entities/Tables";
 
 const seedCustomers = async () => {
   await AppDataSource.initialize();

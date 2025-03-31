@@ -5,7 +5,7 @@ import {
   ManyToOne,
   JoinColumn,
 } from "typeorm";
-import { Table } from "./Table";
+import { Tables } from "./Tables";
 
 @Entity({ schema: "customers" })
 export class Customer {
@@ -15,7 +15,7 @@ export class Customer {
   @Column()
   name: string;
 
-  @ManyToOne(() => Table, (table) => table.customers)
+  @ManyToOne(() => Tables, (table) => table.customers)
   @JoinColumn({ name: "tableid" })
-  table?: Table;
+  table?: Tables;
 }
