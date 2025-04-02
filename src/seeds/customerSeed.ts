@@ -1,12 +1,12 @@
 import { AppDataSource } from "../data-source";
 import { Customer } from "../entities/Customer";
-import { Table } from "../entities/Tables";
+import { Tables } from "../entities/Tables";
 
 const seedCustomers = async () => {
   await AppDataSource.initialize();
 
   const customerRepo = AppDataSource.getRepository(Customer);
-  const tableRepo = AppDataSource.getRepository(Table);
+  const tableRepo = AppDataSource.getRepository(Tables);
   const tablesArray = await tableRepo.find();
   console.log(tablesArray);
 
